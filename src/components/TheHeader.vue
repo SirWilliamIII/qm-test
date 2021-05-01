@@ -1,9 +1,13 @@
 <template>
   <nav class="navbar navbar-light">
     <div class="container">
-      <router-link class="navbar-brand" :to="{ name: 'home' }">
-        TCB
-      </router-link>
+      <div>
+        <router-link class="navbar-brand" :to="{ name: 'home' }">
+          TCB
+        </router-link>
+        <SfButton class="color-info"> Shop now </SfButton>
+      </div>
+
       <ul v-if="!isAuthenticated" class="nav navbar-nav pull-xs-right">
         <li class="nav-item">
           <router-link
@@ -86,11 +90,15 @@
 
 <script>
 import { mapGetters } from "vuex";
+import { SfButton } from "@storefront-ui/vue";
 
 export default {
   name: "RwvHeader",
   computed: {
     ...mapGetters(["currentUser", "isAuthenticated"])
+  },
+  components: {
+    SfButton
   }
 };
 </script>
