@@ -6,6 +6,7 @@
           TCB
         </router-link>
         <SfButton class="color-info"> Shop now </SfButton>
+        <div></div>
       </div>
 
       <ul v-if="!isAuthenticated" class="nav navbar-nav pull-xs-right">
@@ -90,7 +91,7 @@
 
 <script>
 import { mapGetters } from "vuex";
-import { SfButton } from "@storefront-ui/vue";
+import { SfButton, SFQuantitySelector } from "@storefront-ui/vue";
 
 export default {
   name: "RwvHeader",
@@ -98,7 +99,8 @@ export default {
     ...mapGetters(["currentUser", "isAuthenticated"])
   },
   components: {
-    SfButton
+    SfButton,
+    SFQuantitySelector
   }
 };
 </script>

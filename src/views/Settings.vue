@@ -23,6 +23,14 @@
                 />
               </fieldset>
               <fieldset class="form-group">
+                <input
+                  class="form-control form-control-lg"
+                  type="text"
+                  v-model="currentUser.firstName"
+                  placeholder="Your first name"
+                />
+              </fieldset>
+              <fieldset class="form-group">
                 <textarea
                   class="form-control form-control-lg"
                   rows="8"
